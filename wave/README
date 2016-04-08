@@ -1,0 +1,81 @@
+
+WAVE - simulation of 2D-wave propagation in time, using parallel computation
+
+
+REQUIRED SOFTWARE
+
+On Ubuntu, you will need the follwing software packages to compile and run
+the simulation:
+
+* libhdf5-serial-dev
+* libopenmpi-dev
+* openmpi-bin
+* openmpi-common
+* make
+* gcc
+
+To create a simple animated gif with the the h52anim tool, you will also
+need the following packages:
+
+* hdf5-tools
+* ImageMagick
+* gnuplot
+
+
+COMPILING
+
+To compile the program:
+
+1) set the environment variables 
+
+  HDF5_INCLUDE_DIR
+
+and
+
+  HDF5_LIB_DIR
+
+to the locations of the HDF5 include files and the libraries, respectively.
+
+2) build the libthdf.a library, in the neigbouring directory, by running
+
+  make
+
+3) build the wave simulation program by running
+
+  make
+
+in this directory.
+
+If you want to use OpenMP, add the flag "-fopenmp" to both the CFLAGS and
+the LDFLAGS.
+
+
+RUNNING wave
+
+To run wave, use the small shell script; the shell script sets the options
+needed for the simulation; however, feel free to play with the settings
+and observe the effects of the time step on the stability of the solution,
+the compute time, and explore the effects of using more cores.
+
+
+VISUALISING THE SOLUTION
+
+Run
+
+  ./h52anim <result file> u
+
+to create an animated gif with the solution. The animated gif can be viewed
+in a webbrowser or file viewer.
+
+
+FURTHER POST-PROCESSING
+
+The results are written to an HDF5 file, this is a standard binary format for
+storing simulation results. Third-party programs, such as Matlab, can
+read and easily visualise the results.
+
+
+
+
+
+
