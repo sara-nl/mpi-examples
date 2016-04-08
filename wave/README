@@ -36,11 +36,7 @@ and
 
 to the locations of the HDF5 include files and the libraries, respectively.
 
-2) build the libthdf.a library, in the neigbouring directory, by running
-
-  make
-
-3) build the wave simulation program by running
+2) build the wave simulation program by running
 
   make
 
