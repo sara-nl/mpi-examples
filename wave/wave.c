@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../thdf/thdf.h"
+#include "thdf.h"
 
 #include "grid.h"
 #include "worker_grid.h"

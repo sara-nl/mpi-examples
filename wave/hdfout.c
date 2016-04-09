@@ -6,7 +6,7 @@
 #include "grid.h"
 #include "worker_grid_struct.h"
 #include "hdfout.h"
-#include "../thdf/thdf.h"
+#include "thdf.h"
 
 #define DEBUG 0
 

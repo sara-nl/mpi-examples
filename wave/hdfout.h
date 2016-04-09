@@ -1,7 +1,7 @@
 #ifndef _HDFOUT_H_
 #define _HDFOUT_H_
 
-#include "../thdf/thdf.h"
+#include "thdf.h"
 
 typedef struct {
 
